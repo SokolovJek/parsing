@@ -1,9 +1,8 @@
-from pprint import pprint
-import requests
+import json, requests
 
 city = 'Sochi'
 my_params = {'q': city,
-             'appid': 'e5e4cd692a72b0b66ea0a6b80255d1c3'}
+             'appid': 'f6bec3dad120a764f0f2435316f6be46'}
 
 my_headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36'}
 
@@ -19,4 +18,4 @@ if response.ok:
     # pprint(response.text)
     j_data = response.json()
 
-    print(f"Р’ РіРѕСЂРѕРґРµ {j_data.get('name')} С‚РµРјРїРµСЂР°С‚СѓСЂР° {round(j_data.get('main').get('temp') - 273.15, 2)} РіСЂР°РґСѓСЃРѕРІ")
+    print(f"В городе {j_data.get('name')}, {round(j_data.get('main').get('temp') - 273.15, 2)} градусов.")
