@@ -75,7 +75,7 @@ for i in range(5):
         dict_job.append(job_info)
 
 with open('job.json', 'w', encoding='utf-8') as f:
-    json.dump(dict_job, f)
+    json.dump(dict_job, f, ensure_ascii=False)
 
 print(dict_job)
 print(len(dict_job))
