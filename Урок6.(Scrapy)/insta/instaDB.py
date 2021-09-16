@@ -1,0 +1,45 @@
+from pymongo import MongoClient
+
+client = MongoClient('localhost', 27017)  # содаем подключение
+mongo_base = client.insta  # создаем БД
+
+
+colection = mongo_base['username']
+colection.insert_one({'subscriptions': [{'2460109415': {'full_name': 'Диетолог Светлана Фус',
+                                 'name': 'dietolog.fus',
+                                 'photo': 'https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/s150x150/67648015_956449568036819_5295847941875957760_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_ohc=Mt-9xNwDKGsAX950zhr&edm=ALB854YBAAAA&ccb=7-4&oh=9951bec3efae69a879b95518c0322ff8&oe=614B0FF9&_nc_sid=04cb80'}},
+                   {'5561001529': {'full_name': 'ІННОМЕД | медичний центр',
+                                 'name': 'innomed.ua',
+                                 'photo': 'https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/s150x150/159342010_820028751917981_2803484024654098057_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_ohc=GOnT_Wd-pNQAX-mJ8fH&edm=ALB854YBAAAA&ccb=7-4&oh=0e9dd7e940750521082435f767459009&oe=614AB396&_nc_sid=04cb80'}},
+                   {'5999738481': {'full_name': 'Андрей Курпатов',
+                                 'name': 'kurpatov_official',
+                                 'photo': 'https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/s150x150/46599863_1969901416646159_5949189467771240448_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_ohc=GTjUfrNFJ3YAX8xjf7J&edm=ALB854YBAAAA&ccb=7-4&oh=9cd00f366f2619079901a0b6d6f8cec5&oe=6149CDE0&_nc_sid=04cb80'}},
+                   {'1251794174': {'full_name': 'Максим Галкин',
+                                 'name': 'maxgalkinru',
+                                 'photo': 'https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/s150x150/171209666_1603548283368084_4039375436208832193_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_ohc=iIIoiCIxrykAX8AXQ4t&edm=ALB854YBAAAA&ccb=7-4&oh=57d0c267799a2b61f489793f65d355b8&oe=6149F71A&_nc_sid=04cb80'}},
+                   {'12292040331': {'full_name': 'Гинеколог Харьков',
+                                  'name': 'olga__beloded',
+                                  'photo': 'https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/s150x150/83669113_697112087494595_2825093023312904192_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_ohc=zZ_HpH7_4GAAX9SS_Wg&edm=ALB854YBAAAA&ccb=7-4&oh=be91a85f7e37e614f625c87c13c775ab&oe=6149CF88&_nc_sid=04cb80'}},
+                   {'300610256': {'full_name': 'Маргулан Сейсембай',
+                                'name': 'margulan_seissembai',
+                                'photo': 'https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/s150x150/133476572_3392457890865314_3629900936642573549_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_ohc=XbwBif0CX10AX9A87ef&edm=ALB854YBAAAA&ccb=7-4&oh=9b32fd0aa0ea8502a99f67dc39a0bc42&oe=6149956F&_nc_sid=04cb80'}},
+                   {'3144054': {'full_name': 'Илья Варламов',
+                              'name': 'varlamov',
+                              'photo': 'https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/s150x150/64330051_2293496087646260_8278280765590994944_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_ohc=Ir-WXIxEGy4AX8JD-l0&edm=ALB854YBAAAA&ccb=7-4&oh=668d8db688945a807718080997c4af83&oe=6149C172&_nc_sid=04cb80'}},
+                   {'293721159': {'full_name': 'UNICEF Ukraine',
+                                'name': 'unicef_ukraine',
+                                'photo': 'https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/s150x150/21980609_164051977484033_6466802523805057024_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_ohc=jaw8YR8wPtUAX_Bnjlr&edm=ALB854YBAAAA&ccb=7-4&oh=02f5310c9d90f67102e3b328a4bf01f3&oe=614990EE&_nc_sid=04cb80'}},
+                   {'3262721262': {'full_name': 'Доктор Ольга Белоконь',
+                                 'name': 'doctor_belokon',
+                                 'photo': 'https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/s150x150/69495645_498275487396681_4037033266966953984_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_ohc=N_CCi4lziIsAX_zZ2Rv&edm=ALB854YBAAAA&ccb=7-4&oh=de65fa5db33791d5e5b003c59d9ad176&oe=614A3519&_nc_sid=04cb80'}},
+                   {'2300569317': {'full_name': 'Михаил Лабковский',
+                                 'name': 'labkovskiyofficial',
+                                 'photo': 'https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/s150x150/240594454_1092835974579704_8941993337579433237_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_ohc=CGP67-XDBbEAX_QOD5c&edm=ALB854YBAAAA&ccb=7-4&oh=e07e4e12be65298a346c44c4c6880b2f&oe=614A37F3&_nc_sid=04cb80'}},
+                   {'249609133': {'full_name': 'LOBODA',
+                                'name': 'lobodaofficial',
+                                'photo': 'https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/s150x150/236232994_213482254043904_7027194354549290739_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_ohc=lsfsNuPAihIAX9u08-2&edm=ALB854YBAAAA&ccb=7-4&oh=e43a6f1fd4834392a52509a4ea76e64b&oe=614A59F2&_nc_sid=04cb80'}},
+                   {'12496926': {'full_name': 'regina todorenko',
+                               'name': 'reginatodorenko',
+                               'photo': 'https://scontent-arn2-1.cdninstagram.com/v/t51.2885-19/s150x150/166379087_465367731251325_754551096610169036_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_ohc=PmUa5wp4MRIAX8zDFWg&edm=ALB854YBAAAA&ccb=7-4&oh=0f63c47f566e9c67d62ef80151d9c30e&oe=614A48A2&_nc_sid=04cb80'}}],
+ 'user_id': '2101342990',
+ 'username': 'doctor_komarovskiy'})
