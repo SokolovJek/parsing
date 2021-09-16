@@ -63,6 +63,10 @@ my_colections = [{'asdas',12},{"asdasd",123123},{'asdfasd',4444}]
 
 # users.update_one({'_id': '1'}, {'$set' : new_data }, upsert=True)  #*** 3 in 1 ищет докуметн и меняет его, если ненаходит то вставляет значение
 
+#> db.users.update( { name: “joe” } , { $push: { friends: { name: “peter” } } } );                      # добавление данных к существующим
+
+
+
 new_data ={'_id': '1', 'lastname': 'Вова','firstname':'Обоимов', 'birthday': '1967-12-19'}
 
 # users.delete_one({'_id':'3'})                                                   #   DELETE
